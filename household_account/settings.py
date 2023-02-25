@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    'balance_input.apps.Balance_inputConfig',
+    'dashboard.apps.DashboardConfig',
     'accounts.apps.AccountsConfig',
 ]
 
@@ -123,6 +123,10 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
 #ロギング設定
 LOGGING={
     'version':1,
@@ -163,3 +167,5 @@ LOGGING={
         },
     }
 }
+
+AUTH_USER＿MODEL = 'accounts.CustomUser'
