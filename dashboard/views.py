@@ -12,5 +12,5 @@ class SummaryView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         balance_list = Balancesheet.objects.filter(user=self.request.user).order_by('date')    
-        return balance_list 
+        return balance_list
 
