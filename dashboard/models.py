@@ -8,7 +8,7 @@ class Balancesheet(models.Model):
     date = models.DateField(verbose_name='date',auto_now_add=True)
 
     class Meta:
-        verbose_name_plural='Balance_sheet'
+        verbose_name_plural='Balancesheet'
 
     def __str__(self):
-        return f'{self.date} - {self.category} - {self.amount}'
+        return self.date

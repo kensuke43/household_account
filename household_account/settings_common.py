@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
-    'django_bootstrap5'
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -135,10 +135,10 @@ AUTHENTIFICATION_BACKENDS=[
 ]
 
 ACCOUNT_AUTHENTIFICATION_METHOD='email'
-ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_USERNAME_REQUIRED = 'False'
 
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_REQUIRED = 'True'
 
 LOGIN_REDIRECT_URL = 'dashboard:summary'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'

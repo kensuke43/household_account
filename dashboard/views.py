@@ -13,4 +13,8 @@ class SummaryView(LoginRequiredMixin, generic.ListView):
     def get_queryset(self):
         balance_list = Balancesheet.objects.filter(user=self.request.user).order_by('date')    
         return balance_list
-
+    
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['balance_list'] = self.get_queryset() # 新しいbalance_listを取得
+    #     return context
